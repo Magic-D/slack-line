@@ -10,11 +10,11 @@ from linebot.models import MessageEvent, TextMessage, ImageMessage, StickerMessa
 app = Flask(__name__)
 
 # 認証情報の取得
-CHANNEL_ACCESS_TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
-CHANNEL_SECRET = os.environ["LINE_CHANNEL_SECRET"]
-WEB_HOOK_LINKS = os.environ["SLACK_WEB_HOOKS_URL"]
-BOT_OAUTH = os.environ["SLACK_BOT_OAUTH"]
-POST_CHANEL_ID = os.environ["SLACK_POST_CHANEL_ID"]
+CHANNEL_ACCESS_TOKEN = os.environ["CHANNEL_ACCESS_TOKEN"]
+CHANNEL_SECRET = os.environ["CHANNEL_SECRET"]
+WEB_HOOK_LINKS = os.environ["WEB_HOOK_LINKS"]
+BOT_OAUTH = os.environ["BOT_OAUTH"]
+POST_CHANEL_ID = os.environ["POST_CHANEL_ID"]
 
 line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(CHANNEL_SECRET)
